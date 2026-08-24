@@ -1,16 +1,16 @@
 I made this, because I used to use
 [J.C. Johnson's implementation](https://github.com/jcjohnson/neural-style/)
 of
-"A Neural Algorithm of Artistic Style" by gatys, ecker & bethge and
-couldn't find a fully functional, easy to use version of it that
-doesn't require luatorch. I started from
+["A Neural Algorithm of Artistic Style"](https://arxiv.org/abs/1508.06576)
+by Gatys, Ecker & Bethge and couldn't find a fully functional, easy to use
+version of it that doesn't require luatorch. I started from
 [https://github.com/gcerar/pytorch-neural-style-transfer](https://github.com/gcerar/pytorch-neural-style-transfer),
 because it works with pytorch, but then threw out most of the code
 and translated most of jcjohnson's code from luatorch to pytorch,
 because I wanted most of the functionality. Eventually I poured it
 into a ComfyUI custom node for ease of use.
 
-Because the neural style algorithm is optimization based, it takes a
+Because the Neural Style algorithm is optimization based, it takes a
 while to run, but it can produce exceptional results and requires
 only a single style template. None of the diffusion based image
 generation models (like Stable Diffusion) come close for style
@@ -22,8 +22,8 @@ results faster, you can lower the number of iterations and the image
 resolution.
 
 I have included several ComfyUI workflows for you to try out. Of
-course neural style can be combined with other image editing
-operations, so be creative. Neural style can be quite RAM-hungry and
+course Neural Style can be combined with other image editing
+operations, so be creative. Neural Style can be quite RAM-hungry and
 the RAM usage increases proportionally to the number of output
 pixels. If your GPU is RAM-starved, try using ADAM instead of L-BFGS
 as optimization algorithm and try using tiled operation. By setting
