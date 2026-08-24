@@ -1,22 +1,25 @@
-I made this, because I used to use J.C. Johnson's implementation
-( https://github.com/jcjohnson/neural-style/ ) of
+I made this, because I used to use [J.C. Johnson's implementation]
+(https://github.com/jcjohnson/neural-style/) of
 "A Neural Algorithm of Artistic Style" by gatys, ecker & bethge and
 couldn't find a fully functional, easy to use version of it that
 doesn't require luatorch. I started from
-( https://github.com/gcerar/pytorch-neural-style-transfer ) , because
+[https://github.com/gcerar/pytorch-neural-style-transfer]
+(https://github.com/gcerar/pytorch-neural-style-transfer), because
 it works with pytorch, but then threw out most of the code and
 translated most of jcjohnson's code from luatorch to pytorch, because
 I wanted most of the functionality. Eventually I poured it into a
 ComfyUI custom node for ease of use.
 
 Because the neural style algorithm is optimization based, it takes a
-while to run, but it can produce exceptional results. None of the
-diffusion based image generation models (like Stable Diffusion) come
-close for style transfer, not even with control nets. You would have
-to try a few combinations of style image, content image and settings
-to get a good result, not every combination works well, so don't give
-up after the first try. To get results faster, you can lower the
-number of iterations and the image resolution.
+while to run, but it can produce exceptional results and requires
+only a single style template. None of the diffusion based image
+generation models (like Stable Diffusion) come close for style
+transfer, not even with control nets (I'm talking about the base
+models, not LoRAs). You would have to try a few combinations of style
+image, content image and settings to get a good result, not every
+combination works well, so don't give up after the first try. To get
+results faster, you can lower the number of iterations and the image
+resolution.
 
 I have included several ComfyUI workflows for you to try out. Of
 course neural style can be combined with other image editing
@@ -38,18 +41,18 @@ provide more fine-grained detail.
 
 If you want a different look, the best options to try are
 normalize_gradients and optimizer, they change the output a lot.
-Stylizing grayscale images doesn't work that well unless you use
-force_grayscale.
+Changing the style weight and init_image also have strong influence
+on the output. Stylizing grayscale images doesn't work that well
+unless you use force_grayscale.
 
 The VGG19 net offered by pytorch is not really usable, because
 apparently it has been retrained from scratch. Because I wanted to
 make sure that this code produces the same output as jcjohnson's code
-(as much as that is possible with pytorch), the following version of
-VGG19 is needed:
-https://huggingface.co/spaces/AfrodreamsAI/afrodreams/blob/8970ea4f6cc349d826137af0866565df84f0a0ed/vgg19-d01eb7cb.pth
-It uses a different input normalization than pytorch's VGG19 and thus
-isn't a drop-in replacement. If the file ever disappears, you might
-be able to find it again using the Xet hash
+(as much as that is possible with pytorch), [this version of
+VGG19](https://huggingface.co/spaces/AfrodreamsAI/afrodreams/blob/8970ea4f6cc349d826137af0866565df84f0a0ed/vgg19-d01eb7cb.pth)
+is needed. It uses a different input normalization than pytorch's
+VGG19 and thus isn't a drop-in replacement. If the file ever
+disappears, you might be able to find it again using the Xet hash
 f9e4a36f2006749e45f62c5fd3881650b33422d7ffd88548c709b9d7d5d6c825 or
 the SHA256 hash
 dd893d447ece014ad32d71b8d32b1e0b5c09b912a2866990c286fdeebd368d74 .
@@ -64,3 +67,23 @@ I tested this with ComfyUI commit
 your ComfyUI installation, try switching to this commit first. I will
 eventually test this with different ComfyUI commits, but there are so
 many of them, so it will take a while.
+
+Examples
+========
+
+A couple of examples of applying this tool using the styles of
+Jackson Pollock, Pierre-Auguste Renoir, Leonid Afremov, Wassily
+Kandinsky, Robert Delaunay, Ernst Ludwig Kirchner and some others:
+[example00.jpg](![Example00](example00small.jpg))
+[example01.jpg](![Example01](example01small.jpg))
+[example02.jpg](![Example02](example02small.jpg))
+[example03.jpg](![Example03](example03small.jpg))
+[example04.jpg](![Example04](example04small.jpg))
+[example05.jpg](![Example05](example05small.jpg))
+[example06.jpg](![Example06](example06small.jpg))
+[example07.jpg](![Example07](example07small.jpg))
+[example08.jpg](![Example08](example08small.jpg))
+[example09.jpg](![Example09](example09small.jpg))
+[example10.jpg](![Example10](example10small.jpg))
+[example11.jpg](![Example11](example11small.jpg))
+[example12.jpg](![Example12](example12small.jpg))
