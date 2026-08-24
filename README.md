@@ -1,14 +1,14 @@
-I made this, because I used to use [J.C. Johnson's implementation]
-(https://github.com/jcjohnson/neural-style/) of
+I made this, because I used to use
+[J.C. Johnson's implementation](https://github.com/jcjohnson/neural-style/)
+of
 "A Neural Algorithm of Artistic Style" by gatys, ecker & bethge and
 couldn't find a fully functional, easy to use version of it that
 doesn't require luatorch. I started from
-[https://github.com/gcerar/pytorch-neural-style-transfer]
-(https://github.com/gcerar/pytorch-neural-style-transfer), because
-it works with pytorch, but then threw out most of the code and
-translated most of jcjohnson's code from luatorch to pytorch, because
-I wanted most of the functionality. Eventually I poured it into a
-ComfyUI custom node for ease of use.
+[https://github.com/gcerar/pytorch-neural-style-transfer](https://github.com/gcerar/pytorch-neural-style-transfer),
+because it works with pytorch, but then threw out most of the code
+and translated most of jcjohnson's code from luatorch to pytorch,
+because I wanted most of the functionality. Eventually I poured it
+into a ComfyUI custom node for ease of use.
 
 Because the neural style algorithm is optimization based, it takes a
 while to run, but it can produce exceptional results and requires
