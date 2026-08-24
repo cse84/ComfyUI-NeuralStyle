@@ -73,7 +73,8 @@ Examples
 
 A couple of examples of applying this tool using the styles of
 Jackson Pollock, Pierre-Auguste Renoir, Leonid Afremov, Wassily
-Kandinsky, Robert Delaunay, Ernst Ludwig Kirchner and some others:
+Kandinsky, Robert Delaunay, Ernst Ludwig Kirchner and some others.
+Click on them for the full-resolution version:
 [![Example00](example00small.jpg)](example00.jpg)
 [![Example01](example01small.jpg)](example01.jpg)
 [![Example02](example02small.jpg)](example02.jpg)
