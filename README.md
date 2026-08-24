@@ -88,3 +88,6 @@ Click on them for the full-resolution version:
 [![Example10](examples/example10small.jpg)](examples/example10.jpg)
 [![Example11](examples/example11small.jpg)](examples/example11.jpg)
 [![Example12](examples/example12small.jpg)](examples/example12.jpg)
+And some short animations of the optimization process running:
+![Animation0](examples/animation0.webp)
+![Animation1](examples/animation1.webp)
