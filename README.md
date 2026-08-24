@@ -3,7 +3,8 @@ I made this, because I used to use
 of
 ["A Neural Algorithm of Artistic Style"](https://arxiv.org/abs/1508.06576)
 by Gatys, Ecker & Bethge and couldn't find a fully functional, easy to use
-version of it that doesn't require luatorch. I started from
+version of it that doesn't require [luatorch](https://en.wikipedia.org/wiki/Torch_%28machine_learning%29).
+I started from
 [https://github.com/gcerar/pytorch-neural-style-transfer](https://github.com/gcerar/pytorch-neural-style-transfer),
 because it works with pytorch, but then threw out most of the code
 and translated most of jcjohnson's code from luatorch to pytorch,
