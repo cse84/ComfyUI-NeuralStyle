@@ -69,13 +69,18 @@ your ComfyUI installation, try switching to this commit first. I will
 eventually test this with different ComfyUI commits, but there are so
 many of them, so it will take a while.
 
+I found a collection of style template images to get you started
+[here](https://gofile.io/d/DhYpbUaA). I made a copy of that, in case
+the file disappears.
+
 Examples
 ========
 
 A couple of examples of applying this tool using the styles of
 Jackson Pollock, Pierre-Auguste Renoir, Leonid Afremov, Wassily
-Kandinsky, Robert Delaunay, Ernst Ludwig Kirchner and some others.
-Click on them for the full-resolution version:
+Kandinsky, Robert Delaunay, Ernst Ludwig Kirchner, Hannes Felix and
+some others. All examples show style template, content template and
+the resulting output. Click on them for the full-resolution version:
 [![Example00](examples/example00small.jpg)](examples/example00.jpg)
 [![Example01](examples/example01small.jpg)](examples/example01.jpg)
 [![Example02](examples/example02small.jpg)](examples/example02.jpg)
